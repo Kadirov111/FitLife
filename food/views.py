@@ -3,7 +3,7 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
 from .models import Food, Meal, HealthMetrics
 from .serializers import FoodSerializer, MealSerializer, HealthMetricsSerializer
-from command.pagination import CustomPagination
+from exercise.pagination import CustomPagination
 from users.permissions import IsOwnerOrReadOnly
 
 

@@ -1,12 +1,7 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import FoodViewSet, MealViewSet, HealthMetricsViewSet
-
-router = DefaultRouter()
-router.register(r'food', FoodViewSet)
-router.register(r'meal', MealViewSet)
-router.register(r'health-metrics', HealthMetricsViewSet)
+from django.urls import path
+from .views import FoodViewSet, MealViewSet
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('foods/', FoodViewSet.as_view({'get': 'list', 'post': 'create'}), name='food-list'),
+    path('meals/', MealViewSet.as_view({'get': 'list', 'post': 'create'}), name='meal-list'),
 ]

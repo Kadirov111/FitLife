@@ -3,7 +3,7 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
 from .models import Exercise, Workout
 from .serializers import ExerciseSerializer, WorkoutSerializer
-from command.pagination import CustomPagination
+from .pagination import CustomPagination
 from users.permissions import IsOwnerOrReadOnly
 
 
