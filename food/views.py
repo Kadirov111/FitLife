@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from .models import Food, Meal, HealthMetrics
 from .serializers import FoodSerializer, MealSerializer, HealthMetricsSerializer
 from exercise.pagination import CustomPagination
-from users.permissions import IsOwnerOrReadOnly
+from exercise.permissions import IsOwnerOrReadOnly
 
 
 class FoodViewSet(viewsets.ModelViewSet):

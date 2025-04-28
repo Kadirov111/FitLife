@@ -6,13 +6,13 @@ from rest_framework_simplejwt.exceptions import TokenError
 from django.shortcuts import get_object_or_404
 from rest_framework import status
 from .models import User
-from .serializers import RegisterSerializer, UserSerializer
+from .serializers import SignupSerializer, UserSerializer
 from rest_framework.permissions import IsAuthenticated
 
 
-class RegisterView(generics.CreateAPIView):
+class SignupView(generics.CreateAPIView):
     queryset = User.objects.all()
-    serializer_class = RegisterSerializer
+    serializer_class = SignupSerializer
 
 
 class LogoutView(APIView):

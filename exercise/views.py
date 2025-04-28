@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from .models import Exercise, Workout
 from .serializers import ExerciseSerializer, WorkoutSerializer
 from .pagination import CustomPagination
-from users.permissions import IsOwnerOrReadOnly
+from food.permissions import IsOwnerOrReadOnly
 
 
 class ExerciseViewSet(viewsets.ModelViewSet):
